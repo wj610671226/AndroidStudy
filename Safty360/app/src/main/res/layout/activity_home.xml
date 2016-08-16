@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jhtwl.safty360.HomeActivity">
+
+    <TextView
+        style="@style/AppNavigationStyle"
+        android:text="功能列表"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@android:color/black"
+        android:text="我的手机卫士开发，开发哈萨克和发生地方开始恢复"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+    <!--<CustomView.FocusedTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:text="我的手机卫士开发，开发哈萨克和发生地方开始恢复"-->
+    <!--android:textSize="20sp"-->
+    <!--android:singleLine="true"-->
+    <!--/>-->
+
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:numColumns="3"
+        android:layout_weight="1"
+        android:verticalSpacing="20dp"
+        android:layout_marginTop="10dp">
+    </GridView>
+</LinearLayout>

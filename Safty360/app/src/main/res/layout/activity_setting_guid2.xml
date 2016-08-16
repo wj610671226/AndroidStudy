@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jhtwl.safty360.PhoneTheft.SettingGuidActivity2">
+
+
+    <TextView
+        style="@style/AppNavigationStyle"
+        android:text="2.手机卡绑定"/>
+
+    <TextView
+        style="@style/SetingContentStyle"
+        android:text="通过绑定SIM卡："/>
+
+    <TextView
+        style="@style/SetingContentStyle"
+        android:text="下次重启手机如果发现SIM卡变化"/>
+
+    <TextView
+        style="@style/SetingContentStyle"
+        android:text="就会发送报警短信"/>
+
+    <RelativeLayout
+        android:id="@+id/checkboxRelative"
+        android:layout_width="wrap_content"
+        android:onClick="clickCheckBoxParent"
+        android:clickable="true"
+        android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/bindSdCard"
+            style="@style/SetingContentStyle"
+            android:text="点击绑定sim卡"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/simState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机卡没有绑定"
+            android:layout_below="@+id/bindSdCard"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            />
+        <CheckBox
+            android:id="@+id/bindBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/holo_green_light"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/setup2"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            style="@style/SetingNextBtnStyle"
+            android:text="下一步"
+            />
+
+        <Button
+            style="@style/SetingLastBtnStyle"
+            android:text="上一步"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
