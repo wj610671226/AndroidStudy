@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jhtwl.safty360.AdvancedToolActivity">
+
+    <TextView
+        style="@style/AppNavigationStyle"
+        android:text="高级工具"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="归属地查询"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:drawablePadding="5dp"
+        android:onClick="clickQuaryNumber"
+        android:background="@drawable/button"
+        />
+</LinearLayout>

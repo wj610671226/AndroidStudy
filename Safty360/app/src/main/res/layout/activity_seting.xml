@@ -19,4 +19,25 @@
         app:desc_on="自动更新已开启"
         app:title="自动更新设置"
         ></CustomView.SettingItemView>
+
+    <CustomView.SettingItemView
+        android:id="@+id/settingNumberAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:desc_off="归属地显示已经关闭"
+        app:desc_on="归属地显示已经开启"
+        app:title="电话归属地显示设置"
+        ></CustomView.SettingItemView>
+
+    <CustomView.SettingClickView
+        android:id="@+id/settingNumberAddressStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></CustomView.SettingClickView>
+
+    <CustomView.SettingClickView
+        android:id="@+id/settingNumberAddressShowLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></CustomView.SettingClickView>
 </LinearLayout>
