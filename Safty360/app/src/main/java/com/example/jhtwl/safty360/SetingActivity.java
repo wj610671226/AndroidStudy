@@ -1,18 +1,12 @@
 package com.example.jhtwl.safty360;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import CustomView.SettingClickView;
 import CustomView.SettingItemView;
@@ -30,6 +24,8 @@ public class SetingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_seting);
 
         sharedPreferences = getSharedPreferences("config", MODE_PRIVATE);
+
+        // sout 快捷   System.out.println();
 
         // 自动更新
         initAutoUpdateView();
@@ -109,9 +105,11 @@ public class SetingActivity extends AppCompatActivity {
                 if (numberSettingView.isChecked()) {
                     numberSettingView.setChecked(false);
                     sharedPreferences.edit().putBoolean("numberAddress", false).commit();
+//                    stopService(new Intent(SetingActivity.this, AddressService.class));
                 } else {
                     numberSettingView.setChecked(true);
                     sharedPreferences.edit().putBoolean("numberAddress", true).commit();
+//                    startService(new Intent(SetingActivity.this, AddressService.class));
                 }
             }
         });

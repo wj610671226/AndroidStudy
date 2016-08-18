@@ -62,9 +62,8 @@ public class QuaryNumberAddressActivity extends AppCompatActivity {
             return;
         }
 
-
         // 查询
-//        String address = AddressDao.getAddress(numner);
+//        String address = AddressDao.getAddress(numner, getBaseContext());
 //        tv_quaryResult.setText(address);
     }
 

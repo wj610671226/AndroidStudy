@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jhtwl.safty360.AddressLocationActivity">
+    tools:context="com.example.jhtwl.safty360.AddressLocationActivity"
+    android:background="#5000">
 
     <TextView
         android:id="@+id/tv_top"
