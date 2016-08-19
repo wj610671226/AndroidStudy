@@ -46,6 +46,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 0: // 手机防
                         checkIsFirstLogin();
                         break;
+                    case 1: // 通讯卫士
+                        startActivity(new Intent(HomeActivity.this, CommunicationGuardActivity.class));
+                        break;
                     case 7: // 高级工具
                         startActivity(new Intent(HomeActivity.this, AdvancedToolActivity.class));
                         break;
