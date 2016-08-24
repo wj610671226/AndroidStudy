@@ -44,7 +44,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".AddressLocationActivity" />
-        <activity android:name=".CommunicationGuardActivity"></activity>
+        <activity android:name=".CommunicationGuardActivity" />
+        <activity android:name=".AppMangerActivity"></activity>
     </application>
 
 </manifest>
