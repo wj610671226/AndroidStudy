@@ -59,6 +59,7 @@ public class SettingItemView extends RelativeLayout {
 //    }
 
     private void initSettingItemView() {
+
         View.inflate(getContext(), R.layout.seting_item, this);
         titleView = (TextView) findViewById(R.id.titleTv);
         descView = (TextView) findViewById(R.id.desc);
