@@ -35,8 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, AdScrollViewActivity.class));
                 break;
             case R.id.button3:
+                // 侧滑菜单
+                startActivity(new Intent(this, SlideMenuActivity.class));
                 break;
             case R.id.button4:
+                // 上拉加载，下拉刷新
+                startActivity(new Intent(this, RefreshActivity.class));
                 break;
             default:
                 break;

@@ -1,4 +1,4 @@
-package MyCustomView;
+package com.example.jhtwl.customview.MyCustomView;
 
 import android.content.Context;
 import android.util.AttributeSet;

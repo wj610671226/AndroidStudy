@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CombinationActivity" />
-        <activity android:name=".AdScrollViewActivity"></activity>
+        <activity android:name=".AdScrollViewActivity" />
+        <activity android:name=".SlideMenuActivity" />
+        <activity android:name=".RefreshActivity"></activity>
     </application>
 
 </manifest>
