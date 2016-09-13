@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+//    //声明一个意图，作用是开启设备的超级管理员
+//    Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+//    ComponentName cn = new ComponentName(this, MyAdmin.class);
+//    intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, cn);
+//    //劝说用户开启管理员
+//    intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
+//            "开启我把。开启我就可以锁屏了，开启送积分");
+//    startActivity(intent);
+
+
     // 两种上下文的区别
 //    getApplicationContext();生命周期长，只要应用还存活它就存在；
 //            this 生命周期短，只要Activity不存在了，系统就会回收；
@@ -46,4 +56,10 @@ public class MainActivity extends AppCompatActivity {
 //    getApplicationContext（） 使用场景是比如频繁需要操作的数据库
 //    推荐用法:Activity.this
 
+    // shape、selector 、 动画 的使用
+    // 手势的使用、广播、读取手机联系人（内容提供者）
+    // SmsManager 服务的使用
+    // 数据库的使用  Android Studio  项目中的数据库存放位置
+    // 两次点击事件的处理
+    // PackageManger popupwindow
 }

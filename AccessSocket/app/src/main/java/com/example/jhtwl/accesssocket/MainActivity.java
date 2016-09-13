@@ -5,13 +5,16 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,14 +50,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        int crc16 = CRC16.getCRC16(new int[]{0x0B, 0x00, 0x42, 1, 10, 1, 1, 10, 1}, 9);
-
         initUI();
         initSocket();
+
+
+//        SystemClock.sleep(1000);
+//        button1(null);
     }
 
     private void initUI() {
-
         list = new ArrayList<String>();
         tv_number = (TextView) findViewById(R.id.tv_number);
         lv_listView = (ListView) findViewById(R.id.lv_list);
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     static class ViewHolder {
         TextView tv_uid;
     }
+
     public class MyAdapter extends BaseAdapter {
 
         @Override
@@ -96,18 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
             holder.tv_uid.setText(list.get(i));
             return view;
-        }
-    }
-
-    public void button7(View view){
-        int crc16 = CRC16.getCRC16(new int[]{0x0B, 0x00, 0x42, 1, 10, 1, 1, 10, 1}, 9);
-        byte gs_SocketSendBuffer[] = new byte[]{0x0B, 0x00, 0x42, 1, 10, 1, 1, 10, 1, (byte) (crc16 & 0xFF), (byte) ((crc16 >> 8) & 0xFF)};
-        try {
-            Util.outputStream = mSocket.getOutputStream();
-            Util.outputStream.write(gs_SocketSendBuffer);
-            Util.outputStream.flush();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
@@ -177,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         };
         if (timer == null) {
             timer = new Timer();
-            timer.schedule(task, 0, 1000);
+            timer.schedule(task, 0, 500);
         }
     }
 
@@ -192,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     mSocket = Util.getSocketInstacne();
+                    Log.e("mSocket", String.valueOf(mSocket));
                     ByteArrayOutputStream output = new ByteArrayOutputStream();
                     int len = 0;
                     byte buffer[] = new byte[1024];
@@ -216,9 +210,11 @@ public class MainActivity extends AppCompatActivity {
                             output.reset();
                         }
                     }
-                } catch (Exception e) {
+                } catch (IOException e) {
                     e.printStackTrace();
+                    Toast.makeText(MainActivity.this, "连接异常，检查网络", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         thread.start();

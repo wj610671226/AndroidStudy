@@ -131,6 +131,5 @@
             android:background="@drawable/channel4"
             android:layout_centerHorizontal="true"/>
 
-
     </RelativeLayout>
 </RelativeLayout>

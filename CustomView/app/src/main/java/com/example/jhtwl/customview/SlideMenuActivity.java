@@ -1,10 +1,9 @@
 package com.example.jhtwl.customview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.jhtwl.customview.MyCustomView.SlideMenu;
 
@@ -12,7 +11,6 @@ public class SlideMenuActivity extends AppCompatActivity {
 
     private ImageView btn_back;
     private SlideMenu slideMenu;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

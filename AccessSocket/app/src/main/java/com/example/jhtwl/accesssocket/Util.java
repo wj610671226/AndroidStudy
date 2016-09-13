@@ -5,6 +5,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -50,11 +51,15 @@ public class Util {
 	
 	public static void sendMsg(byte msg[] ,Context context) {
 		try {
-			outputStream= socket.getOutputStream();
+
+//			Log.e("socket", String.valueOf(socket));
+//			Log.e("outputStream", String.valueOf(outputStream));
+			outputStream = socket.getOutputStream();
             outputStream.write(msg);
             outputStream.flush();
 		} catch (Exception e) {
 			e.printStackTrace();
+			Toast.makeText(context, "启动异常，请拔掉门禁电源，并重启程序", Toast.LENGTH_SHORT).show();
 			Log.e("exception", e.getMessage());
 		}
 	}

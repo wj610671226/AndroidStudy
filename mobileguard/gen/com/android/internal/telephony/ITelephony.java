@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/jhtwl/Desktop/mobileguard/src/com/android/internal/telephony/ITelephony.aidl
+ * Original file: /Users/jhtwl/Desktop/AndroidStudy/mobileguard/src/com/android/internal/telephony/ITelephony.aidl
  */
 package com.android.internal.telephony;
 /**
