@@ -9,6 +9,8 @@ import com.example.jhtwl.zhcity.Fragment.LeftMenuFragment;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
+import org.xutils.x;
+
 /**
  * 主页面
  * 
@@ -24,14 +26,16 @@ public class MainActivity extends SlidingFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_main);
+		// 初始化xutils
+		x.Ext.init(getApplication());
 
+		setContentView(R.layout.activity_main);
 		setBehindContentView(R.layout.left_menu);// 设置侧边栏
 		SlidingMenu slidingMenu = getSlidingMenu();// 获取侧边栏对象
 		slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);// 设置全屏触摸
-		slidingMenu.setBehindOffset(200);// 设置预留屏幕的宽度
-
+		slidingMenu.setBehindWidth(350);// 设置预留屏幕的宽度
 		initFragment();
+
 	}
 
 	/**
@@ -50,4 +54,17 @@ public class MainActivity extends SlidingFragmentActivity {
 		// Fragment leftMenuFragment = fm.findFragmentByTag(FRAGMENT_LEFT_MENU);
 	}
 
+	// 获取主页面fragment
+	public ContentFragment getContentFragment() {
+		FragmentManager manager = getSupportFragmentManager();
+		ContentFragment fragment = (ContentFragment) manager.findFragmentByTag(FRAGMENT_CONTENT);
+		return fragment;
+	}
+
+	// 获取侧边栏fragment
+	public LeftMenuFragment getLeftMenuFragment() {
+		FragmentManager manager = getSupportFragmentManager();
+		LeftMenuFragment leftMenuFragment = (LeftMenuFragment) manager.findFragmentByTag(FRAGMENT_LEFT_MENU);
+		return leftMenuFragment;
+	}
 }

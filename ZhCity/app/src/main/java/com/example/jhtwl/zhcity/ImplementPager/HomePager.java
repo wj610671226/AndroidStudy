@@ -2,7 +2,7 @@ package com.example.jhtwl.zhcity.ImplementPager;
 
 import android.app.Activity;
 
-import com.example.jhtwl.zhcity.View.BasePager;
+import com.example.jhtwl.zhcity.Base.BasePager;
 
 /**
  * 描述：
@@ -17,6 +17,7 @@ public class HomePager extends BasePager {
 
     @Override
     public void initData() {
+        super.initData();
         tx_title.setText("首页");
         setSildingMenuEnable(false);
     }

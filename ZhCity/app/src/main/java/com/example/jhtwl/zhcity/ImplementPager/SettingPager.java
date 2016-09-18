@@ -2,7 +2,7 @@ package com.example.jhtwl.zhcity.ImplementPager;
 
 import android.app.Activity;
 
-import com.example.jhtwl.zhcity.View.BasePager;
+import com.example.jhtwl.zhcity.Base.BasePager;
 
 
 /**
@@ -17,6 +17,7 @@ public class SettingPager extends BasePager {
 
     @Override
     public void initData() {
+        super.initData();
         tx_title.setText("设置");
         setSildingMenuEnable(true);
     }

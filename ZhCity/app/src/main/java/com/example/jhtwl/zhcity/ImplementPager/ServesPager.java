@@ -2,7 +2,7 @@ package com.example.jhtwl.zhcity.ImplementPager;
 
 import android.app.Activity;
 
-import com.example.jhtwl.zhcity.View.BasePager;
+import com.example.jhtwl.zhcity.Base.BasePager;
 
 /**
  * 描述：
@@ -16,6 +16,7 @@ public class ServesPager extends BasePager {
 
     @Override
     public void initData() {
+        super.initData();
         tx_title.setText("智慧服务");
         setSildingMenuEnable(true);
     }

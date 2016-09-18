@@ -12,7 +12,7 @@ import com.example.jhtwl.zhcity.ImplementPager.NewsCenterPager;
 import com.example.jhtwl.zhcity.ImplementPager.ServesPager;
 import com.example.jhtwl.zhcity.ImplementPager.SettingPager;
 import com.example.jhtwl.zhcity.R;
-import com.example.jhtwl.zhcity.View.BasePager;
+import com.example.jhtwl.zhcity.Base.BasePager;
 
 
 import java.util.ArrayList;
@@ -115,5 +115,12 @@ public class ContentFragment extends BaseFragment {
                 container.removeView((View) object);
             }
         });
+    }
+
+    /**
+    *   获取新闻中心页面
+     */
+    public NewsCenterPager getNesCenterPager() {
+        return (NewsCenterPager) pagerList.get(1);
     }
 }

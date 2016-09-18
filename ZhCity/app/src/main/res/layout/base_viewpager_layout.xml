@@ -16,6 +16,7 @@
             android:background="@drawable/img_menu"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
+            android:clickable="true"
             />
 
         <TextView

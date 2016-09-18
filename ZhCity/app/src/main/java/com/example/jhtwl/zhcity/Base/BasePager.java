@@ -1,9 +1,11 @@
-package com.example.jhtwl.zhcity.View;
+package com.example.jhtwl.zhcity.Base;
 
 import android.app.Activity;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jhtwl.zhcity.MainActivity;
 import com.example.jhtwl.zhcity.R;
@@ -19,6 +21,7 @@ public class BasePager {
     public View mRootView;
     public TextView tx_title; // 标题
     public ImageButton imageButton; // 菜单按钮
+    public FrameLayout flContent; // 内容
 
     public BasePager(Activity activity) {
         this.mactivity = activity;
@@ -32,10 +35,22 @@ public class BasePager {
         mRootView = View.inflate(mactivity, R.layout.base_viewpager_layout, null);
         tx_title = (TextView) mRootView.findViewById(R.id.tv_title);
         imageButton = (ImageButton) mRootView.findViewById(R.id.ib_menu);
+        flContent = (FrameLayout) mRootView.findViewById(R.id.fl_content);
     }
 
     public void initData() {
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setSildingMenuShow();
+            }
+        });
+    }
 
+    private void setSildingMenuShow() {
+        MainActivity mainActivity = (MainActivity) mactivity;
+        SlidingMenu menu = mainActivity.getSlidingMenu();
+        menu.toggle();
     }
 
     public void setSildingMenuEnable(boolean enable) {
@@ -56,6 +71,5 @@ public class BasePager {
         } else {
             imageButton.setVisibility(View.INVISIBLE);
         }
-
     }
 }
