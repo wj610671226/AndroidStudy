@@ -1,1 +1,1 @@
-include ':app', 'SlidingMenu', 'xutils'
+include ':app', 'xutils', 'SlidingMenu'

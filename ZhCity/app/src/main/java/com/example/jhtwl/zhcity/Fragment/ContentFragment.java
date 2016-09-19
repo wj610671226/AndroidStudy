@@ -30,7 +30,6 @@ public class ContentFragment extends BaseFragment {
         View view = View.inflate(mActivity, R.layout.fragment_content, null);
         viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         radioGroup = (RadioGroup) view.findViewById(R.id.rg_group);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         return view;
     }
 
@@ -73,7 +72,7 @@ public class ContentFragment extends BaseFragment {
         });
 
         // 监听viewPager的改变
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 // 获取当前页面，初始化数据

@@ -35,7 +35,7 @@ public class BasePager {
         mRootView = View.inflate(mactivity, R.layout.base_viewpager_layout, null);
         tx_title = (TextView) mRootView.findViewById(R.id.tv_title);
         imageButton = (ImageButton) mRootView.findViewById(R.id.ib_menu);
-        flContent = (FrameLayout) mRootView.findViewById(R.id.fl_content);
+        flContent = (FrameLayout) mRootView.findViewById(R.id.fl_pager_content);
     }
 
     public void initData() {

@@ -6,6 +6,14 @@ import android.widget.Toast;
 
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
 import com.example.jhtwl.zhcity.Base.BasePager;
+import com.example.jhtwl.zhcity.Bean.NewsData;
+import com.example.jhtwl.zhcity.Fragment.LeftMenuFragment;
+import com.example.jhtwl.zhcity.MainActivity;
+import com.example.jhtwl.zhcity.MenuDetailImplement.InteractMenuDetailPager;
+import com.example.jhtwl.zhcity.MenuDetailImplement.NewsMenuDetailPager;
+import com.example.jhtwl.zhcity.MenuDetailImplement.PhotoMenuDetailPager;
+import com.example.jhtwl.zhcity.MenuDetailImplement.TopicMenuDetailPager;
+import com.google.gson.Gson;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -26,6 +34,7 @@ public class NewsCenterPager extends BasePager {
 
     // 4个菜单详情页的集合
     private ArrayList<BaseMenuDetailPager> mPages;
+    private NewsData mNesData;
 
     public NewsCenterPager(Activity activity) {
         super(activity);
@@ -55,7 +64,7 @@ public class NewsCenterPager extends BasePager {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                Log.e("onError", ex.toString());
+                Toast.makeText(mactivity, "网络错误", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -101,7 +110,23 @@ public class NewsCenterPager extends BasePager {
      *  解析网络数据
      */
     private void parseNetData(String data) {
+        Gson gson = new Gson();
+        mNesData = gson.fromJson(data, NewsData.class);
 
+        // 刷新侧边栏数据
+        MainActivity mainActivity = (MainActivity) mactivity;
+        LeftMenuFragment leftMenuFragment = mainActivity.getLeftMenuFragment();
+        leftMenuFragment.setMenuData(mNesData);
+
+        // 准备4个菜单详情页
+        mPages = new ArrayList<BaseMenuDetailPager>();
+        mPages.add(new NewsMenuDetailPager(mactivity, mNesData.data.get(0).children));
+        mPages.add(new TopicMenuDetailPager(mactivity));
+        mPages.add(new PhotoMenuDetailPager(mactivity));
+        mPages.add(new InteractMenuDetailPager(mactivity));
+
+        // 设置菜单详情页-新闻为默认当前页
+        setCurrentMenuDetailPager(0);
     }
 
     /**
@@ -116,6 +141,10 @@ public class NewsCenterPager extends BasePager {
         flContent.addView(pager.mRootView);
 
         // 设置当前页的标题
+        NewsData.NewsMenuData newsMenuData = mNesData.data.get(postion);
+        tx_title.setText(newsMenuData.title);
 
+        // 初始化当前页面的数据
+        pager.initData();
     }
 }

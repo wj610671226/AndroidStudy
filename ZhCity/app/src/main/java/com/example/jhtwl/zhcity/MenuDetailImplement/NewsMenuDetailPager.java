@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
+import com.example.jhtwl.zhcity.Bean.NewsData;
+
+import java.util.ArrayList;
 
 /**
  * 描述：新闻页面
@@ -15,7 +18,7 @@ import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
  */
 public class NewsMenuDetailPager extends BaseMenuDetailPager {
 
-    public NewsMenuDetailPager(Activity mActivity) {
+    public NewsMenuDetailPager(Activity mActivity, ArrayList<NewsData.NewsTabData> children) {
         super(mActivity);
     }
 

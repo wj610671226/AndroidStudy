@@ -1,11 +1,11 @@
 package com.example.jhtwl.zhcity;
 
 import java.util.ArrayList;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -21,7 +21,7 @@ import android.widget.RelativeLayout;
  * @author Kevin
  * 
  */
-public class GuideActivity extends Activity {
+public class GuideActivity extends AppCompatActivity {
 
 	private static final int[] mImageIds = new int[] { R.drawable.guide_1,
 			R.drawable.guide_2, R.drawable.guide_3 };
@@ -64,7 +64,7 @@ public class GuideActivity extends Activity {
 		initViews();
 		vpGuide.setAdapter(new GuideAdapter());
 
-		vpGuide.addOnPageChangeListener(new GuidePageListener());
+		vpGuide.setOnPageChangeListener(new GuidePageListener());
 	}
 
 	/**
