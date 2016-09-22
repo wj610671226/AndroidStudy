@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/detail_pager_listView_icon"
+            android:layout_width="100dp"
+            android:layout_height="70dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网上大讲堂368期预告：义务环保人人有责"
+            android:textSize="20sp"
+            android:lines="2"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/pubdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014-10-1113:18"
+            android:gravity="center_vertical"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

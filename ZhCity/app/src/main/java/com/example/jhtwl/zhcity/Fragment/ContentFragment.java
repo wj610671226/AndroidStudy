@@ -72,7 +72,7 @@ public class ContentFragment extends BaseFragment {
         });
 
         // 监听viewPager的改变
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 // 获取当前页面，初始化数据

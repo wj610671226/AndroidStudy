@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
 import com.example.jhtwl.zhcity.Base.BasePager;
 import com.example.jhtwl.zhcity.Bean.NewsData;
+import com.example.jhtwl.zhcity.CommonData.CommonDataMessage;
 import com.example.jhtwl.zhcity.Fragment.LeftMenuFragment;
 import com.example.jhtwl.zhcity.MainActivity;
 import com.example.jhtwl.zhcity.MenuDetailImplement.InteractMenuDetailPager;
@@ -54,17 +55,18 @@ public class NewsCenterPager extends BasePager {
      */
     private void getDataFromServer() {
         Toast.makeText(mactivity,"开始请求数据", Toast.LENGTH_SHORT).show();
-        RequestParams params = new RequestParams("http://10.10.0.113:8080/zhbj/categories.json");
+        RequestParams params = new RequestParams(CommonDataMessage.CATEGORIES_URL);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.e("onSuccess", result);
+                Log.e("NewsCenterPager  -- onSuccess", result);
                 parseNetData(result);
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                Toast.makeText(mactivity, "网络错误", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mactivity, "网络错误" + ex.toString(), Toast.LENGTH_SHORT).show();
+                Log.e("onError", ex.toString());
             }
 
             @Override

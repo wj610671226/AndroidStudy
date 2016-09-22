@@ -16,7 +16,6 @@ public abstract class BaseMenuDetailPager {
     public BaseMenuDetailPager(Activity mActivity) {
         this.mActivity = mActivity;
         mRootView = initViews();
-
     }
 
     /*

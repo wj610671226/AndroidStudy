@@ -1,1 +1,2 @@
 include ':app', 'xutils', 'SlidingMenu'
+include ':ViewPagerIndicator'

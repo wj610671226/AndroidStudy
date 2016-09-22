@@ -54,7 +54,6 @@ public class SplashActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) { // 动画结束
-
                 SharedPreferences sharedPreferences =  getSharedPreferences("config", MODE_PRIVATE);
                 boolean isShowGuide =  sharedPreferences.getBoolean("isShowGuide", false);
                 if (!isShowGuide) {
