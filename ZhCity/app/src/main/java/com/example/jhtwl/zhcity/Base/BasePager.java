@@ -5,9 +5,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.jhtwl.zhcity.MainActivity;
+import com.example.jhtwl.zhcity.Activity.MainActivity;
 import com.example.jhtwl.zhcity.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -22,6 +21,7 @@ public class BasePager {
     public TextView tx_title; // 标题
     public ImageButton imageButton; // 菜单按钮
     public FrameLayout flContent; // 内容
+    public ImageButton photo_menu;
 
     public BasePager(Activity activity) {
         this.mactivity = activity;
@@ -35,6 +35,7 @@ public class BasePager {
         mRootView = View.inflate(mactivity, R.layout.base_viewpager_layout, null);
         tx_title = (TextView) mRootView.findViewById(R.id.tv_title);
         imageButton = (ImageButton) mRootView.findViewById(R.id.ib_menu);
+        photo_menu = (ImageButton) mRootView.findViewById(R.id.photo_menu);
         flContent = (FrameLayout) mRootView.findViewById(R.id.fl_pager_content);
     }
 

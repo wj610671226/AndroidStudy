@@ -1,20 +1,16 @@
 package com.example.jhtwl.zhcity.MenuDetailImplement;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
 import com.example.jhtwl.zhcity.Base.TabDetailPager;
 import com.example.jhtwl.zhcity.Bean.NewsData;
-import com.example.jhtwl.zhcity.MainActivity;
+import com.example.jhtwl.zhcity.Activity.MainActivity;
 import com.example.jhtwl.zhcity.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.viewpagerindicator.TabPageIndicator;

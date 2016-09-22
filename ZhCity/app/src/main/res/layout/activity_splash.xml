@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_bg_newyear"
-    tools:context="com.example.jhtwl.zhcity.SplashActivity"
+    tools:context=".Activity.SplashActivity"
     android:id="@+id/rl_splash">
 
     <ImageView

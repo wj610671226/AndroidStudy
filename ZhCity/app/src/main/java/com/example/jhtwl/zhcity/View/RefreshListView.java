@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -22,7 +23,7 @@ import java.util.Date;
  * 创建人: jhtwl
  * 时间: 16/9/21  上午10:00
  */
-public class RefreshListView extends ListView {
+public class RefreshListView extends ListView implements AdapterView.OnItemClickListener{
 
     private View mHeaderView;
     private ImageView refresh_arraw;
@@ -240,5 +241,22 @@ public class RefreshListView extends ListView {
             refresh_state.setText("下拉刷新");
             mCurrentRefreshState = STATE_PULL_REFRESH;
         }
+    }
+
+
+    private OnItemClickListener onItemClickListener;
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        if (onItemClickListener != null) {
+            onItemClickListener.onItemClick(adapterView, view, i - getHeaderViewsCount(), l);
+        }
+    }
+
+    @Override
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        super.setOnItemClickListener(this);
+
+        onItemClickListener = listener;
     }
 }

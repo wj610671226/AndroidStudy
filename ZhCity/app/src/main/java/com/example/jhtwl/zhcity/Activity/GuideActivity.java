@@ -1,4 +1,4 @@
-package com.example.jhtwl.zhcity;
+package com.example.jhtwl.zhcity.Activity;
 
 import java.util.ArrayList;
 import android.content.Intent;
@@ -15,6 +15,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.example.jhtwl.zhcity.R;
+import com.example.jhtwl.zhcity.Utils.DensityUtils;
+
 /**
  * 新手引导
  * 
@@ -85,10 +89,11 @@ public class GuideActivity extends AppCompatActivity {
 			View point = new View(this);
 			point.setBackgroundResource(R.drawable.shape_point_gray);// 设置引导页默认圆点
 
-			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-					10, 10);
+			int width = DensityUtils.dp2px(this, 10);
+			int height = DensityUtils.dp2px(this, 10);
+			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, height);
 			if (i > 0) {
-				params.leftMargin = 10;// 设置圆点间隔
+				params.leftMargin = DensityUtils.dp2px(this, 10);// 设置圆点间隔
 			}
 
 			point.setLayoutParams(params);// 设置圆点的大小

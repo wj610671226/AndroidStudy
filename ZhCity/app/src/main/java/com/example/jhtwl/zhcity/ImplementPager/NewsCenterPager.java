@@ -2,6 +2,7 @@ package com.example.jhtwl.zhcity.ImplementPager;
 
 import android.app.Activity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
@@ -9,7 +10,7 @@ import com.example.jhtwl.zhcity.Base.BasePager;
 import com.example.jhtwl.zhcity.Bean.NewsData;
 import com.example.jhtwl.zhcity.CommonData.CommonDataMessage;
 import com.example.jhtwl.zhcity.Fragment.LeftMenuFragment;
-import com.example.jhtwl.zhcity.MainActivity;
+import com.example.jhtwl.zhcity.Activity.MainActivity;
 import com.example.jhtwl.zhcity.MenuDetailImplement.InteractMenuDetailPager;
 import com.example.jhtwl.zhcity.MenuDetailImplement.NewsMenuDetailPager;
 import com.example.jhtwl.zhcity.MenuDetailImplement.PhotoMenuDetailPager;
@@ -20,10 +21,6 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -124,7 +121,7 @@ public class NewsCenterPager extends BasePager {
         mPages = new ArrayList<BaseMenuDetailPager>();
         mPages.add(new NewsMenuDetailPager(mactivity, mNesData.data.get(0).children));
         mPages.add(new TopicMenuDetailPager(mactivity));
-        mPages.add(new PhotoMenuDetailPager(mactivity));
+        mPages.add(new PhotoMenuDetailPager(mactivity, photo_menu));
         mPages.add(new InteractMenuDetailPager(mactivity));
 
         // 设置菜单详情页-新闻为默认当前页
@@ -148,5 +145,11 @@ public class NewsCenterPager extends BasePager {
 
         // 初始化当前页面的数据
         pager.initData();
+
+        if (pager instanceof PhotoMenuDetailPager) {
+            photo_menu.setVisibility(View.VISIBLE);
+        } else {
+            photo_menu.setVisibility(View.INVISIBLE);
+        }
     }
 }

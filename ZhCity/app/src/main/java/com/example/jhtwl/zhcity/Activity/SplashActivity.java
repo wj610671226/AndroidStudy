@@ -1,4 +1,4 @@
-package com.example.jhtwl.zhcity;
+package com.example.jhtwl.zhcity.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
+
+import com.example.jhtwl.zhcity.R;
 
 public class SplashActivity extends Activity {
 

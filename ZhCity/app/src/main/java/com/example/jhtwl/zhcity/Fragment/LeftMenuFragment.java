@@ -6,11 +6,10 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.jhtwl.zhcity.Bean.NewsData;
 import com.example.jhtwl.zhcity.ImplementPager.NewsCenterPager;
-import com.example.jhtwl.zhcity.MainActivity;
+import com.example.jhtwl.zhcity.Activity.MainActivity;
 import com.example.jhtwl.zhcity.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 

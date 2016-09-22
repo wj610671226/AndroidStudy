@@ -1,4 +1,4 @@
-package com.example.jhtwl.zhcity;
+package com.example.jhtwl.zhcity.Activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.example.jhtwl.zhcity.Fragment.ContentFragment;
 import com.example.jhtwl.zhcity.Fragment.LeftMenuFragment;
+import com.example.jhtwl.zhcity.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
@@ -33,7 +34,10 @@ public class MainActivity extends SlidingFragmentActivity {
 		setBehindContentView(R.layout.left_menu);// 设置侧边栏
 		SlidingMenu slidingMenu = getSlidingMenu();// 获取侧边栏对象
 		slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);// 设置全屏触摸
-		slidingMenu.setBehindWidth(350);// 设置预留屏幕的宽度
+
+		// 获取屏幕宽度
+		int screenWidth = getWindowManager().getDefaultDisplay().getWidth();
+		slidingMenu.setBehindWidth(450 * screenWidth / 1080);// 设置预留屏幕的宽度
 		initFragment();
 
 	}

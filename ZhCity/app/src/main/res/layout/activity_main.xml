@@ -5,6 +5,6 @@
     android:layout_height="match_parent"
     android:id="@+id/fl_content"
     android:background="@android:color/white"
-    tools:context="com.example.jhtwl.zhcity.MainActivity">
+    tools:context=".Activity.MainActivity">
 
 </FrameLayout>

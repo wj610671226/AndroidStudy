@@ -14,4 +14,9 @@ public class CommonDataMessage {
      * 获取分类信息的接口
      */
     public static final String CATEGORIES_URL = BASE_URL + "/categories.json";
+    /**
+     * 获取组图信息的接口
+     */
+    public static final String PHOTOS_URL = BASE_URL
+            + "/photos/photos_1.json";
 }
