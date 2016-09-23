@@ -255,7 +255,7 @@ public class TabDetailPager extends BaseMenuDetailPager {
 
         @Override
         public void onPageSelected(int position) {
-            Log.e("tabDetail_HeaderView_Indicator", "" + position);
+//            Log.e("tabDetail_HeaderView_Indicator", "" + position);
             TabDetailPagerData.DataBean.TopnewsBean topnewsBean = topnewsBeanArrayList.get(position);
             top_news_title.setText(topnewsBean.getTitle());
         }

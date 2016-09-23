@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.jhtwl.zhcity.Base.BaseMenuDetailPager;
 import com.example.jhtwl.zhcity.Bean.PhotoDataBean;
+import com.example.jhtwl.zhcity.BitMapCacheUtils.BitMapCacheUtils;
 import com.example.jhtwl.zhcity.CommonData.CommonDataMessage;
 import com.example.jhtwl.zhcity.R;
 import com.google.gson.Gson;
@@ -40,6 +41,7 @@ public class PhotoMenuDetailPager extends BaseMenuDetailPager {
     private ArrayList<PhotoDataBean.DataBean.PhotoNewsBean> listData;
 
     private boolean isShowListView = true;
+    private BitMapCacheUtils cacheUtils;
 
     public PhotoMenuDetailPager(Activity mActivity, ImageButton photo_menu) {
         super(mActivity);
@@ -150,6 +152,10 @@ public class PhotoMenuDetailPager extends BaseMenuDetailPager {
 
             PhotoDataBean.DataBean.PhotoNewsBean newsBean = listData.get(i);
             x.image().bind(holder.iv_photo, newsBean.getListimage());
+//            if (cacheUtils == null) {
+//                cacheUtils = new BitMapCacheUtils(mActivity);
+//            }
+//            cacheUtils.display(holder.iv_photo, newsBean.getListimage());
             holder.tv_title.setText(newsBean.getTitle());
             return view;
         }
