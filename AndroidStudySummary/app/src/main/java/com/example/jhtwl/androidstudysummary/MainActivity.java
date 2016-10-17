@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     // 调用系统工具安装apk
     private void installAPK(File t) {
         Intent intent = new Intent();
-        intent.setAction("android.intent.action.INSTALL_PACKAGE" );
+        intent.setAction("android.intent.action.INSTALL_PACKAGE");
         intent.addCategory("android.intent.category.DEFAULT");
         intent.setDataAndType(Uri.fromFile(t), "application/vnd.android.package-archive");
         startActivity(intent);

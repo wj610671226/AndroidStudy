@@ -14,8 +14,7 @@ public class DensityUtils {
 		// dp和px的关系: dp = px/设备密度
 		// 获取设备屏幕密度
 		float density = ctx.getResources().getDisplayMetrics().density;
-		int px = (int) (dp * density + 0.5f);// 4.9->5 4.4->4
-
+		int px = (int) (dp * density + 0.5f);   // 4.9->5 4.4->4
 		return px;
 	}
 

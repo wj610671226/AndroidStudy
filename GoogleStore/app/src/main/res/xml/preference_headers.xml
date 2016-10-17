@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header android:fragment="com.jhtwl.googlestore.Activity.PreferenceTestActivity$Prefs1Fragment"
+        android:icon="@drawable/ic_launcher"
+        android:title="程序选项设置"
+        android:summary="设置应用的相关选项"></header>
+
+    <header android:fragment="com.jhtwl.googlestore.Activity.PreferenceTestActivity$Prefs2Fragment"
+        android:icon="@drawable/ic_action_search"
+        android:title="界面选项设置"
+        android:summary="设置显示界面的相关选项"
+        >
+        <!--使用extra可向Activity传入额外的数据-->
+        <extra
+            android:name="website"
+            android:value="www.baidu.com"></extra>
+    </header>
+
+    <!--使用Intent启动指定Activity的列表项-->
+    <header
+        android:icon="@drawable/ic_empty_page"
+        android:title="使用Intent"
+        android:summary="使用Intent启动Activity">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http:www.baidu.com"></intent>
+    </header>
+</preference-headers>

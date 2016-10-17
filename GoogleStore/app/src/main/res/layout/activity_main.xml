@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/startActionBarActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ActionBar"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startNotifictionActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifiction"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startTouchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="触摸机制"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startViewHolderActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="面向ViewHolder编程"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startAsyncTaskActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AsyncTask"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startKindOfActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="各种Activity"
+                android:onClick="clickButton" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
