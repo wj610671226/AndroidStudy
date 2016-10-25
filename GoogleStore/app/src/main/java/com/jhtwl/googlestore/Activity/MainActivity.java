@@ -36,6 +36,30 @@ public class MainActivity extends AppCompatActivity {
             case R.id.startKindOfActivity:
                 startActivity(new Intent(this, KindOfActivity.class));
                 break;
+            case R.id.startLifeStyleActivity:
+                startActivity(new Intent(this, LifeStyleActivity.class));
+                break;
+            case R.id.startImplicitActivity:
+                Intent intent = new Intent();
+                intent.setAction("com.jhtwl.googlestore.startImplicitActivity");
+                intent.addCategory("com.jhtwl.googlestore.addCategory");
+                startActivity(intent);
+                break;
+            case R.id.startCanvasActivity:
+                startActivity(new Intent(this, CanvasActivity.class));
+                break;
+            case R.id.startAnimationActivity:
+                startActivity(new Intent(this, AnimationActivity.class));
+                break;
+            case R.id.startSaveFileActivity:
+                startActivity(new Intent(this, SaveFileActivity.class));
+                break;
+            case R.id.startObservableActivity:
+                startActivity(new Intent(this, ObservableActivity.class));
+                break;
+            case R.id.startGestureActivity:
+                startActivity(new Intent(this, GestureActivity.class));
+                break;
         }
     }
 }

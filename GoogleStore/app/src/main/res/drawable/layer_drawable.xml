@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--定义轨道的背景-->
+    <item android:id="@android:id/background" android:drawable="@drawable/ic_launcher"></item>
+    <!--定义轨道上面已经完成的外观-->
+    <item android:id="@android:id/progress" android:drawable="@drawable/ic_action_search"></item>
+</layer-list>

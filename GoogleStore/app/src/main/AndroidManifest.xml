@@ -27,7 +27,27 @@
         <activity android:name=".Activity.KindOfActivity" />
         <activity android:name=".Activity.Launcher_Activity" />
         <activity android:name=".Activity.ExpandableListTestActivity" />
-        <activity android:name=".Activity.PreferenceTestActivity"></activity>
+        <activity android:name=".Activity.PreferenceTestActivity" />
+        <activity android:name=".Activity.LifeStyleActivity" />
+        <activity android:name=".Activity.ImplicitActivity">
+            <intent-filter>
+                <action android:name="com.jhtwl.googlestore.startImplicitActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.jhtwl.googlestore.addCategory" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.CanvasActivity" />
+        <activity android:name=".Activity.AnimationActivity" />
+        <activity android:name=".Activity.SaveFileActivity" />
+        <activity android:name=".Activity.ObservableActivity" />
+        <activity android:name=".Activity.GestureActivity" />
+
+        <provider
+            android:name=".Provider.DictContentProvider"
+            android:authorities="com.jhtwl.providers.dictproviders"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>

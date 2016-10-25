@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <!--  oneshor  是否重复  false表示重复-->
+    <!--添加帧-->
+    <item android:drawable="@drawable/ic_launcher" android:duration="200"></item>
+    <item android:drawable="@drawable/ic_action_search" android:duration="200"></item>
+    <item android:drawable="@drawable/ic_empty_page" android:duration="200"></item>
+    <item android:drawable="@drawable/ic_error_page" android:duration="200"></item>
+</animation-list>

@@ -56,6 +56,55 @@
                 android:text="各种Activity"
                 android:onClick="clickButton" />
 
+            <Button
+                android:id="@+id/startLifeStyleActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity的生命周期"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startImplicitActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity的隐式启动"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startCanvasActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绘图"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startAnimationActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动画"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startSaveFileActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据存储"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startObservableActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观察者模式"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startGestureActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手势"
+                android:onClick="clickButton" />
+
         </LinearLayout>
 
     </ScrollView>

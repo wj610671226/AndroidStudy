@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!--rectangle 长方形   line 线   ring 圆环   oval 椭圆 -->
+    <!--   <corners>圆角</corners>  -->
+    <!--   <gradient>渐变</gradient>  -->
+    <!--   <padding>间隔</padding>  -->
+    <!--   <size>大小</size>  -->
+    <!--   <solid>填充</solid>  -->
+    <!--   <stroke>瞄边</stroke>  -->
+
+    <!--设置填充颜色-->
+    <solid android:color="#fff"></solid>
+    <padding android:left="7dp"
+        android:right="7dp"
+        android:top="7dp"
+        android:bottom="7dp"></padding>
+    <stroke android:width="3dp" android:color="#ff0"></stroke>
+</shape>
