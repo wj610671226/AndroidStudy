@@ -105,6 +105,26 @@
                 android:text="手势"
                 android:onClick="clickButton" />
 
+            <Button
+                android:id="@+id/startServicesActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务Services"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startBroadcastActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广播"
+                android:onClick="clickButton" />
+
+            <Button
+                android:id="@+id/startWebViewActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebView"
+                android:onClick="clickButton" />
         </LinearLayout>
 
     </ScrollView>

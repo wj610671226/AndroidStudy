@@ -60,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.startGestureActivity:
                 startActivity(new Intent(this, GestureActivity.class));
                 break;
+            case R.id.startServicesActivity:
+                startActivity(new Intent(this, ServicesActivity.class));
+                break;
+            case R.id.startBroadcastActivity:
+                startActivity(new Intent(this, BroadcastActivity.class));
+                break;
+            case R.id.startWebViewActivity:
+                startActivity(new Intent(this, WebviewActivity.class));
+                break;
         }
     }
 }

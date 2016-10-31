@@ -42,12 +42,37 @@
         <activity android:name=".Activity.SaveFileActivity" />
         <activity android:name=".Activity.ObservableActivity" />
         <activity android:name=".Activity.GestureActivity" />
+        <activity android:name=".Activity.ServicesActivity" />
 
-        <provider
-            android:name=".Provider.DictContentProvider"
-            android:authorities="com.jhtwl.providers.dictproviders"
+        <service
+            android:name=".Services.MyService"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
+        <service
+            android:name=".Services.BindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Activity.BroadcastActivity" />
+
+        <!-- <receiver -->
+        <!-- android:name=".Broadcast.MyReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter android:priority="20"> -->
+        <!-- <action android:name="com.jhtwl.googlestore.mybroadsast" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".Broadcast.SecondReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="10">
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Activity.WebviewActivity"></activity>
     </application>
 
 </manifest>
